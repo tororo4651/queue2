@@ -1,0 +1,91 @@
+// 配置が切り替わる・STAFF
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.staffAlternate {
+  display: flex;
+  flex-direction: column-reverse;
+
+  & + & {
+    margin-top: 50px;
+  }
+
+  &__body {
+    padding: 30px 20px 50px;
+    margin-inline: calc(50% - 50vw) 0;
+    background-color: g.$baseColor;
+
+    .staffAlternate.--reverse & {
+      margin-inline: 0 calc(50% - 50vw);
+    }
+  }
+
+  &__heading {
+    padding-bottom: 5px;
+    border-bottom: dashed 1px;
+    @include g.rem-fz(22);
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-top: 20px;
+  }
+
+  &__figure {
+    margin-inline: calc(50% - 50vw);
+  }
+
+
+  @include g.mq {
+    flex-direction: row;
+    align-items: center;
+    background-color: g.$baseColor;
+
+    &.--reverse {
+      flex-direction: row-reverse;
+    }
+
+    & + & {
+      margin-top: 150px;
+    }
+
+    &__body {
+      width: 50%;
+      margin-inline: 0;
+      padding: 40px;
+
+      .staffAlternate.--reverse & {
+        margin-inline: 0;
+      }
+    }
+
+    &__figure {
+      width: 50vw;
+      margin-inline: 0 calc(50% - 50vw);
+      translate: 0 -50px;
+
+      .staffAlternate.--reverse & {
+        margin-inline: calc(50% - 50vw) 0;
+      }
+    }
+  }
+
+
+  @include g.mq(lg-min) {
+
+    &__heading {
+      padding-bottom: 10px;
+      @include g.rem-fz(30);
+    }
+
+    &__text {
+      margin-top: 40px;
+      @include g.rem-fz(20);
+      line-height: 2;
+    }
+  }
+}

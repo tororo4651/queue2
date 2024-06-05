@@ -1,0 +1,39 @@
+// 表・法
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.lawTable {
+  width: 100%;
+  border: solid 1px g.$x-baseColor;
+
+  &__header,
+  &__data {
+    border-top: solid 1px g.$x-baseColor;
+    padding: 10px 15px;
+    @include g.rem-fz(12);
+    vertical-align: middle;
+  }
+
+  &__header {
+    // width: calc(115 / 335 * 100%);
+    width: 30%;
+    background-color: g.$baseColor;
+  }
+
+  &__data {
+    background-color: g.$whiteColor;
+  }
+
+
+  @include g.mq('sm-min') {
+
+    &__header,
+    &__data {
+      padding: 20px;
+      @include g.rem-fz(16);
+    }
+  }
+}

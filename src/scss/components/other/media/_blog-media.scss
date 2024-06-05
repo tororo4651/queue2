@@ -1,0 +1,106 @@
+// メディア・ブログ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.blogMedia {
+  border-top: dashed 1px g.$x-baseColor;
+  border-bottom: dashed 1px g.$x-baseColor;
+  padding-block: 20px;
+  display: flex;
+
+  & + & {
+    margin-top: -1px;
+  }
+
+  &__figure {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background-color: g.$baseColor;
+    color: g.$x-baseColor;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__body {
+    margin-inline-start: 20px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tag {
+    margin-left: 10px;
+  }
+
+  &__title {
+    margin-top: 5px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &__link {
+    text-underline-position: under;
+  }
+
+
+  @include g.mq {
+    padding-block: 40px;
+    align-items: flex-start;
+
+    &__figure {
+      position: relative;
+      width: calc(318 / 1084 * 100%);
+      height: auto;
+      @include g.rem-fz(30);
+
+      &::before {
+        content: "";
+        display: block;
+        padding-top: calc(190 / 318 * 100%);
+      }
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__body {
+      margin-inline-start: 30px;
+    }
+
+    &__tag {
+      margin-left: 30px;
+    }
+
+    &__title {
+      margin-top: 10px;
+      @include g.rem-fz(20);
+    }
+
+    &__text {
+      margin-top: 10px;
+    }
+
+    &__btn {
+      margin-top: 20px;
+      margin-left: auto;
+      width: 317px;
+    }
+  }
+}

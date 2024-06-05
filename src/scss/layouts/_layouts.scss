@@ -1,0 +1,24 @@
+// レイアアウト
+
+
+// 変数、ミックスイン、関数
+@use "../global/" as g;
+
+
+
+// コンテナ
+
+.l-container {
+  box-sizing: content-box;
+  max-width: 1084px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+// 中
+.l-md-container {
+  box-sizing: content-box;
+  max-width: 800px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}

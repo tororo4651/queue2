@@ -1,0 +1,145 @@
+// フォーム・お問い合わせ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.contactForm {
+
+  &__item {
+    border-top: dashed 1px g.$x-baseColor;
+    border-bottom: dashed 1px g.$x-baseColor;
+    padding-block: 30px;
+
+    & + & {
+      margin-top: -1px;
+    }
+  }
+
+  &__label {
+    @include g.rem-fz(18);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    + * {
+      margin-top: 20px;
+    }
+  }
+
+  &__tag {
+    margin-left: 30px;
+  }
+
+  &__selectWrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      margin: auto;
+      width: 10px;
+      height: 10px;
+      border-right: solid 2px;
+      border-bottom: solid 2px;
+      transform: rotate(45deg);
+      pointer-events: none;
+
+      .is-error & {
+        color: g.$accentColor;
+      }
+    }
+  }
+
+  &__select,
+  &__textarea,
+  &__input {
+    appearance: none;
+    width: 100%;
+    padding: 10px 20px;
+    border: solid 1px #707070;
+    border-radius: 4px;
+    background-color: g.$whiteColor;
+    font-family: inherit;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 5px rgba(168, 142, 37, .7);
+    }
+
+    .is-error & {
+      border-color: g.$accentColor;
+      color: g.$accentColor;
+    }
+  }
+
+  &__textarea {
+    // height: 240px;
+  }
+
+  &__note {
+    margin-top: 10px;
+    color: #707070;
+    @include g.rem-fz(12);
+  }
+
+  &__error {
+    display: none;
+    margin-top: 16px;
+    color: g.$accentColor;
+    font-weight: bold;
+    align-items: center;
+
+    .is-error & {
+      display: flex;
+    }
+
+    &::before {
+      content: "";
+      width: 1.25em;
+      height: 1.25em;
+      margin-right: .2em;
+      background-image: url(../images/common/ico_attention.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__btnWrapper {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__text {
+    margin-top: 10px;
+  }
+
+
+  @include g.mq('md-min') {
+
+    &__btnWrapper {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__btn {
+      margin-inline: auto;
+    }
+  }
+}

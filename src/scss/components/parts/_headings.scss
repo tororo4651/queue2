@@ -1,0 +1,133 @@
+// パーツ・見出し
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+
+// Level1
+.lv1Heading {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 32px;
+    background-image: url(/src/images/common/ico_paw3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__ja {
+    margin-top: 10px;
+    margin-left: 0.2em;
+    @include g.rem-fz(30);
+  }
+
+  &__en {
+    margin-top: 10px;
+    margin-left: .2em;
+    color: g.$x-baseColor;
+    @include g.rem-fz(15);
+    text-transform: uppercase;
+  }
+
+
+  @include g.mq() {
+
+    &::before {
+      width: 60px;
+      height: 48px;
+    }
+
+    &__ja {
+      @include g.rem-fz(40);
+    }
+
+    &__en {
+      @include g.rem-fz(20);
+    }
+  }
+}
+
+
+
+// Level2
+.lv2Heading {
+  position: relative;
+
+  &__title {
+    color: g.$mainColor;
+    @include g.rem-fz(24);
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+  }
+
+  &.--center {
+    text-align: center;
+  }
+
+  &.--icon {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: 21px;
+      height: 46px;
+      margin-right: 10px;
+      background-image: url(../images/common/ico_cat.svg);
+      background-repeat: no-repeat;
+      background-position: 0% 100%;
+      background-size: contain;
+    }
+
+    .lv2Heading__title {
+      flex-grow: 1;
+      padding-bottom: 5px;
+      border-bottom: solid 2px g.$x-baseColor;
+    }
+  }
+
+  &.--btn {
+
+    .lv2Heading__title {
+      padding-right: 90px;
+    }
+  }
+
+
+  @include g.mq {
+
+    &__title {
+      @include g.rem-fz(30);
+    }
+
+    &.--icon {
+
+      &::before {
+        width: 30px;
+        height: 67px;
+      }
+    }
+
+    &.--btn {
+
+      .lv2Heading__title {
+        padding-right: 110px;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+// カード・商品
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.productCard {
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #ddd;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    margin-block-start: 30px;
+    padding-block-end: 5px;
+    border-bottom: dashed 1px;
+    @include g.rem-fz(18);
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__figure {
+    order: -1;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: calc(182 / 305 * 100%);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    margin-block: 20px;
+    // height: 63px;
+    @include g.rem-fz(14);
+    line-height: 1.5;
+  }
+
+  &__price {
+    align-self: flex-end;
+    // text-align: right;
+    margin-block-start: auto;
+    font-weight: bold;
+
+    &Note {
+      @include g.rem-fz(12);
+      font-weight: normal;
+    }
+  }
+
+  &__btn {
+    margin-block-start: 10px;
+  }
+
+  &__ribbon {
+    position: absolute;
+    top: 15px;
+    left: -30px;
+    width: 120px;
+    background-color: g.$accentColor;
+    color: g.$whiteColor;
+    @include g.rem-fz(14);
+    font-weight: bold;
+    text-align: center;
+    rotate: -45deg;
+  }
+}

@@ -1,0 +1,167 @@
+// パーツ・ボタン
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+
+// Small
+.sm-btn {
+  display: inline-block;
+  padding: 0 1.5em;
+  border-radius: 6px;
+  background-color: g.$mainColor;
+  color: g.$whiteColor;
+  @include g.rem-fz(13);
+  text-decoration-line: none;
+  cursor: pointer;
+  transition: all .3s;
+
+  &:hover,
+  &:focus {
+    background-color:
+    g.$x-baseColor;
+    color: g.$whiteColor;
+  }
+
+
+  @include g.mq() {
+    @include g.rem-fz(16);
+  }
+}
+
+
+
+
+// more
+.moreBtn {
+  border: solid 1px;
+  border-radius: 6px;
+  padding: 10px;
+  color: g.$mainColor;
+  @include g.rem-fz(14);
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s;
+
+  @include g.hover-focus {
+    border-color: g.$x-baseColor;
+    background-color: g.$baseColor;
+    color: g.$mainColor;
+  }
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px;
+    border-right: solid 2px;
+    margin-inline-start: 5px;
+    transform: translate(0, 1px) rotate(45deg);
+  }
+}
+
+
+
+
+// move (previous, next)
+.moveBtn {
+  appearance: none;
+  padding: 20px;
+  border: solid 1px;
+  border-radius: 6px;
+  @include g.rem-fz(20);
+  font-weight: bold;
+  line-height: 1;
+  text-decoration-line: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+
+  &.--prev {
+    background-color: g.$whiteColor;
+    color: g.$mainColor;
+
+    &::before {
+      content: "";
+      width: .57em;
+      height: .57em;
+      border-top: solid 2px;
+      border-left: solid 2px;
+      margin-right: .2em;
+      rotate: -45deg;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: g.$baseColor;
+      color: g.$mainColor;
+      border-color: g.$x-baseColor;
+    }
+  }
+
+  &.--next {
+    border-color: g.$x-baseColor;
+    background-color: g.$x-baseColor;
+    color: g.$whiteColor;
+
+    &::after {
+      content: "";
+      width: .57em;
+      height: .57em;
+      border-top: solid 2px;
+      border-right: solid 2px;
+      margin-left: 0.2em;
+      transform: rotate(45deg);
+    }
+
+    &:hover,
+    &:focus {
+      opacity: .7;
+    }
+  }
+}
+
+
+
+
+// cart
+.cartBtn {
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: g.$x-baseColor;
+  color: g.$whiteColor;
+  @include g.rem-fz(14);
+  font-weight: bold;
+  line-height: 1;
+  text-decoration-line: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .3s;
+
+  &::before {
+    content: "";
+    width: 1.3em;
+    height: 1.3em;
+    margin-inline-end: 0.36em;
+    background-image: url(../images/common/ico_cart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: .7;
+  }
+}

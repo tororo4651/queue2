@@ -1,0 +1,81 @@
+// ボックス・カート
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+
+.cartSection {
+  display: grid;
+  row-gap: 30px;
+
+  &__thumbnails {
+    margin-block-start: 5px;
+    display: flex;
+  }
+
+  &__thumbnail {
+    width: 20%;
+
+    &Image {
+      border: solid 5px transparent;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover,
+      &:focus {
+        opacity: .7;
+      }
+
+      &.is-current {
+        border-color: g.$x-baseColor;
+      }
+    }
+  }
+
+  &__info {
+    padding: 20px;
+    border: solid 1px g.$x-baseColor;
+
+    &Text {
+      margin-block-start: 10px;
+    }
+  }
+
+
+  @include g.mq('md-min') {
+    grid-template-areas:
+      "photos cart"
+      "photos info";
+    grid-template-columns:
+      1fr 1fr;
+    grid-template-rows:
+      repeat(2, auto);
+    gap: 15px 20px;
+
+    &__cart {
+      grid-area: cart;
+    }
+
+    &__photos {
+      grid-area: photos;
+    }
+
+    &__info {
+      grid-area: info;
+    }
+
+    &__thumbnails {
+      margin-block-start: 12px;
+    }
+
+    &__thumbnail {
+      width: calc((100% - 10px * 4) / 5);
+
+      & + & {
+        margin-inline-start: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+// パーツ・タグ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+
+.tag {
+  display: inline-block;
+  min-width: 92px;
+  padding: 4px 10px;
+  background-color: g.$baseColor;
+  @include g.rem-fz(12);
+  line-height: 1;
+  text-align: center;
+
+  &.--new {
+    background-color: g.$accentColor;
+    color: g.$whiteColor;
+    font-weight: bold;
+  }
+
+  &.--require {
+    min-width: 51px;
+    background-color: g.$accentColor;
+    color: g.$whiteColor;
+    font-weight: normal;
+  }
+}

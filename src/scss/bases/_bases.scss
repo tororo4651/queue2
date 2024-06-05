@@ -1,0 +1,48 @@
+// ベース
+
+
+// 変数、ミックスイン、関数
+@use "../global/" as g;
+
+
+
+*:focus {
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: g.$textColor;
+  font-family: g.$sans;
+  line-height: 1.75;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+}
+
+a {
+  color: g.$linkColor;
+  transition: all .3s;
+
+  &:hover,
+  &:focus {
+    color: g.$xx-baseColor;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  appearance: none;
+  cursor: pointer;
+}

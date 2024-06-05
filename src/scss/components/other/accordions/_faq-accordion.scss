@@ -1,0 +1,139 @@
+// アコーディオン・FAQ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.faqAccordion {
+  margin-inline: -20px;
+
+  &__question {
+
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+
+    &Btn {
+      width: 100%;
+      padding: 15px 10px;
+      border: none;
+      background-color: g.$baseColor;
+      font-family: g.$sans;
+      display: flex;
+      align-items: center;
+    }
+
+    &Icon {
+      flex-shrink: 0;
+      color: g.$x-baseColor;
+      @include g.rem-fz(30);
+      font-weight: bold;
+      line-height: 1;
+      vertical-align: middle
+    }
+
+    &Text {
+      flex-grow: 1;
+      margin-left: 15px;
+      font-weight: bold;
+      text-align: start;
+    }
+
+    &Toggle {
+      flex-shrink: 0;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin-left: 15px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin-block: auto;
+        width: 100%;
+        height: 0;
+        border-top: solid 1px;
+      }
+
+      &::after {
+        transition: rotate .5s;
+        rotate: 90deg;
+
+        .faqAccordion__questionBtn.is-open & {
+          rotate: 0deg;
+        }
+      }
+    }
+  }
+
+  &__answer {
+    max-height: 0;
+    // height でも可。
+    overflow: hidden;
+    transition: max-height .5s;
+
+    &Inner {
+      padding: 20px 20px 20px 10px;
+      display: flex;
+    }
+
+    &Icon {
+      flex-shrink: 0;
+      @include g.rem-fz(30);
+      font-weight: bold;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    &Text {
+      margin-left: 15px;
+    }
+  }
+
+
+  @include g.mq() {
+    margin-inline: 0;
+
+    &__question {
+
+      &Btn {
+        padding: 15px;
+      }
+
+      &Icon {
+        @include g.rem-fz(40);
+      }
+
+      &Text {
+        margin-left: 20px;
+        @include g.rem-fz(18);
+      }
+
+      &Toggle {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+
+    &__answer {
+
+      &Inner {
+        padding: 20px 20px 20px 15px;
+      }
+
+      &Icon {
+        @include g.rem-fz(40);
+      }
+
+      &Text {
+        margin-left: 20px;
+      }
+    }
+  }
+}

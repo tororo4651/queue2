@@ -14,7 +14,7 @@ insert_final_newline = true
 
 # Markdown（マークダウン）
 [*.md]
-tirm_trailing_whitespace = false
+trim_trailing_whitespace = false
 
 
 # HTML, CSS

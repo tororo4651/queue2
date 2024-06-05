@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head', { pageTitle: '入力内容の確認', description: "ハンドメイド猫グッズのお店 l'atelier Queueのお問い合わせ確認ページです。" }) %>
+
+
+<body class="contact">
+
+<%- include('../components/common/_header.ejs') %>
+
+<%- include('../components/common/_gnav', { src: '../../' }) %>
+
+
+<ol class="breadcrumb l-container">
+  <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">ホーム</a></li>
+
+  <li class="breadcrumb__item">お問い合わせ</li>
+</ol>
+
+
+<main class="main">
+  <div class="l-md-container">
+
+    <h1 class="main__heading lv1Heading">
+      <span class="lv1Heading__ja">入力内容の確認</span>
+      <span class="lv1Heading__en">Contact</span>
+    </h1>
+
+    <p class="main__lead">以下の内容でよろしければ送信ボタンを押して下さい。</p>
+
+
+    <form class="contactForm" action="#" method="POST">
+
+      <div class="contactForm__item">
+        <label class="contactForm__label">
+          お問い合わせ種類
+          <span class="contactForm__tag tag --require">必須</span>
+        </label>
+
+        <div class="contactForm__text">
+          商品について
+        </div><!-- /.contactForm__text -->
+      </div><!-- /.contactForm__item -->
+
+      <div class="contactForm__item">
+        <label class="contactForm__label">
+          お問い合わせ内容
+          <span class="contactForm__tag tag --require">必須</span>
+        </label>
+
+        <div class="contactForm__text">
+          お問い合わせ内容テキストが入ります。お問い合わせ内容テキストが入ります。お問い合わせ内容テキストが入ります。お問い合わせ内容テキストが入ります。お問い合わせ内容テキストが入ります。
+        </div><!-- /.contactForm__text -->
+      </div><!-- /.contactForm__item -->
+
+      <div class="contactForm__item">
+        <label class="contactForm__label">
+          お名前
+          <span class="contactForm__tag tag --require">必須</span>
+        </label>
+
+        <div class="contactForm__text">
+          猫野三毛蔵
+        </div><!-- /.contactForm__text -->
+      </div><!-- /.contactForm__item -->
+
+      <div class="contactForm__item">
+        <label class="contactForm__label">
+          返信用メールアドレス
+          <span class="contactForm__tag tag --require">必須</span>
+        </label>
+
+        <div class="contactForm__text">
+          mikezou@sample.jp
+        </div><!-- /.contactForm__text -->
+      </div><!-- /.contactForm__item -->
+
+
+      <div class="contactForm__btnWrapper">
+        <button class="contactForm__btn moveBtn --prev">修正する</button>
+
+        <button class="contactForm__btn moveBtn --next">送信する</button>
+      </div><!-- /.contactForm__btnWrapper -->
+    </form>
+
+  </div><!-- /.l-md-container -->
+</main>
+
+
+<%- include('../components/common/_footer', { src: '../../' }) %>
+
+
+</body>
+</html>

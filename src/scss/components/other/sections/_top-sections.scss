@@ -1,0 +1,197 @@
+// セクション・トップページ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+// 1
+.topSection1 {
+  margin-top: 80px;
+
+  &__list {
+    margin-top: 20px;
+    border-bottom: dashed 1px g.$x-baseColor;
+    line-height: 1.5;
+
+    &Date {
+      border-top: dashed 1px g.$x-baseColor;
+      padding-top: 15px;
+    }
+
+    &Desc {
+      padding-bottom: 15px;
+    }
+
+    &Link {
+      display: inline-block;
+      text-underline-position: under;
+    }
+  }
+
+
+  @include g.mq() {
+
+    &__list {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+
+      &Date {
+        width: 7em;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      &Desc {
+        width: calc(100% - 7em);
+        padding: 20px 0;
+        border-top: dashed 1px g.$x-baseColor;
+        display: flex;
+        align-items: center;
+      }
+
+      &Link {
+        margin-left: 15px;
+      }
+    }
+  }
+
+}
+
+
+
+// 2
+.topSection2 {
+  margin-block-start: 80px;
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+
+  @include g.mq() {
+    margin-block-start: 100px;
+
+    &__heading {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+
+
+// 3
+.topSection3 {
+  margin-top: 80px;
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+
+  @include g.mq('md-min') {
+    margin-top: 100px;
+
+    &__heading {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+
+
+// 4
+.topSection4 {
+  margin-block-start: 80px;
+  padding-block: 80px;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: calc(50vw - 50%);
+  background-color: g.$baseColor;
+
+  &__lead {
+    margin-block-start: 30px;
+  }
+
+  &__alternate {
+    max-width: 400px;
+    margin-inline: auto;
+
+    &:first-of-type {
+      margin-block-start: 50px;
+    }
+
+    &:not(:first-of-type) {
+      margin-block-start: 30px;
+    }
+  }
+
+
+  @include g.mq {
+    margin-block-start: 100px;
+    padding-block: 100px;
+
+    &__lead {
+      margin-block-start: 40px;
+      text-align: center;
+    }
+
+    &__alternate {
+      max-width: none;
+
+      &:first-of-type {
+        margin-block-start: 80px;
+      }
+
+      &:not(:first-of-type) {
+        margin-block-start: 40px;
+      }
+    }
+  }
+}
+
+
+
+// 5
+.topSection5 {
+  padding: 80px 0;
+  text-align: center;
+
+  &__image {
+    margin-top: 30px;
+    width: 140px;
+    height: 140px;
+  }
+
+  &__account {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-top: 20px;
+  }
+
+  &__sns {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+
+    &Icon {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+
+  @include g.mq() {
+    padding: 100px 0;
+
+    &__image {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<button class="gNavBtn" aria-label="メインメニューを開く" aria-controls="gNav" aria-expanded="false">
+  <span class="gNavBtn__bars">
+    <span class="gNavBtn__bar"></span>
+  </span>
+
+  <span class="gNavBtn__text">Menu</span>
+</button>
+
+
+<nav class="gNav" id="gNav" aria-label="メインメニュー" aria-hidden="true">
+  <div class="gNav__inner l-container">
+
+    <img class="gNav__image" src="<%= src %>images/common/logo_small.svg" alt="ハンドメイド猫グッズのお店　-nekonokomono-　l'atelier Queue（アトリエ・クー）" width="76" height="104">
+
+    <ul class="gNav__list">
+      <li class="gNav__item">
+        <a class="gNav__link" href="/">トップページ</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--products" href="/products/">商品一覧</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--blog" href="/blog/">ねこブログ</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--staff" href="/staff/">ねこ店員紹介</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--faq" href="/faq">よくあるご質問</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--contact" href="/contact">お問い合わせ</a>
+      </li>
+    </ul>
+
+    <ul class="gNav__list2">
+      <li class="gNav__list2Item">
+        <a class="gNav__list2Link" href="/law/">
+          特定商取引法に関する表記
+        </a>
+      </li>
+
+      <li class="gNav__list2Item">
+        <a class="gNav__list2Link" href="/privacy/">
+          プライバシーポリシー
+        </a>
+      </li>
+    </ul>
+
+  </div><!-- /.gNav__inner.l-container -->
+</nav>

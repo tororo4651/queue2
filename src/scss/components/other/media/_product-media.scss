@@ -1,0 +1,44 @@
+// メディア・商品
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.productMedia {
+
+  &__link {
+    border: solid 1px #ddd;
+    text-decoration-line: none;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      border-color: g.$x-baseColor;
+      background-color: g.$baseColor;
+      color: g.$mainColor;
+    }
+  }
+
+  &__figure {
+    // width: calc(120 / 375 * 100vw);
+
+    flex-shrink: 0;
+    width: min(120 / 375 * 100vw, 120px);
+    aspect-ratio: 1 / 1;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    // width: calc(213 / 375 * 100vw);
+
+    padding: 10px 10px 10px 20px;
+    font-size: min(16 / 375 * 100vw, 18px);
+  }
+}

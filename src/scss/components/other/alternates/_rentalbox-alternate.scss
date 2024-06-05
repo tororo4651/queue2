@@ -1,0 +1,77 @@
+// 配置が切り替わる・レンタルボックス
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.rentalboxAlternate {
+  display: flex;
+  flex-direction: column-reverse;
+
+  &__body {
+    margin-block-start: 20px;
+  }
+
+  &__heading {
+    padding: 10px;
+    background-color: g.$mainColor;
+    color: g.$whiteColor;
+  }
+
+  &__list {
+    margin-block-start: 20px;
+    display: grid;
+    grid-template-columns:
+      max-content 1fr;
+    gap: 10px 30px;
+
+    &Title {
+      @include g.rem-fz(14);
+      font-weight: bold;
+    }
+
+    &Desc {
+      @include g.rem-fz(14);
+    }
+
+    &Link {
+      word-break: break-all;
+      // overflow-wrap: break-word;
+      text-underline-position: under;
+    }
+  }
+
+
+  @include g.mq {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    &__body {
+      margin-block-start: 0;
+      width: calc(624 / 1084 * 100%);
+    }
+
+    &__figure {
+      width: calc(440 / 1084 * 100%);
+    }
+
+    &__heading {
+      padding: 8px 20px;
+      @include g.rem-fz(20);
+    }
+
+    &__list {
+      // margin-block-start: 30px;
+
+      &Title {
+        @include g.rem-fz(16);
+      }
+
+      &Desc {
+        @include g.rem-fz(16);
+      }
+    }
+  }
+}

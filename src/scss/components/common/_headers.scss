@@ -1,0 +1,106 @@
+// 共通・ヘッダー
+
+
+// 変数、ミックスイン、関数
+@use "../../global/" as g;
+
+
+// トップページ
+.topHeader {
+  border-bottom: solid min(30 / 375 * 100vw, 30px) g.$baseColor;
+
+  &__head {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__text {
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    padding: 30px 0;
+    font-size: min(16 / 375 * 100vw, 20px);
+    line-height: 1.8;
+  }
+
+  &__image {
+    height: min(200 / 375 * 100vw, 200px);
+    background-image: url(../images/common/bg_top_header_sp.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  @include g.mq() {
+    border-bottom: none;
+
+    &__head {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__heading {
+      width: calc(424 / 1084 * 100%);
+    }
+
+    &__text {
+      width: calc(624 / 1084 * 100%);
+      padding-left: 55px;
+      padding-right: 55px;
+      font-size: min(20 / 1124 * 100vw, 20px);
+    }
+
+    &__image {
+      background-image: url(@images/common/bg_top_header.jpg);
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+    }
+  }
+}
+
+
+
+
+// トップページ以外
+.header {
+  height: 110px;
+  background-image: url(../images/common/bg_top_header.jpg);
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+
+  &__mask {
+    height: 100%;
+    background-color: rgba(#fff, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 200px;
+    height: 70px;
+  }
+
+
+  @include g.mq {
+    height: 200px;
+
+    &__mask {
+      padding-inline: 30px;
+      justify-content: flex-start;
+    }
+
+    &__logo {
+      width: 400px;
+      height: 140px;
+    }
+  }
+}

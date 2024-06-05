@@ -1,0 +1,48 @@
+// リスト・商品
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+
+.productList {
+  max-width: 400px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -20px;
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+
+  @include g.mq('sm-min') {
+    max-width: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -20px;
+
+    &.--card {
+      margin-bottom: -40px;
+
+      .productList__item {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__item {
+      width: calc((100% - 20px * 2) / 2);
+      margin-left: 20px;
+    }
+  }
+
+
+  @include g.mq(md-min) {
+
+    &__item {
+      width: calc((100% - 20px * 3) / 3);
+    }
+  }
+}

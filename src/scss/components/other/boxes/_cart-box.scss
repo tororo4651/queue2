@@ -1,0 +1,216 @@
+// ボックス・カート
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+
+.cartBox {
+
+  // 下に配置
+  &.--bottom {
+    margin-block-start: 80px;
+    border: solid 1px g.$x-baseColor;
+    padding: 15px;
+
+    & + & {
+      margin-block-start: 40px;
+    }
+  }
+
+  // タイプが１つ
+  &.--single {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 20px;
+
+    .cartBox__body {
+      flex-grow: 1;
+    }
+
+    .cartBox__figure {
+      flex-shrink: 0;
+      width: 100px;
+    }
+
+    .cartBox__form {
+      margin-block-start: 20px;
+    }
+
+    .cartBox__cartBtn {
+      margin-inline-start: auto;
+    }
+  }
+
+
+  &__heading {
+    padding-block-end: 10px;
+    border-bottom: dashed 1px;
+    @include g.rem-fz(22);
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__id {
+    margin-block-start: 10px;
+  }
+
+  &__price {
+    @include g.rem-fz(20);
+    font-weight: bold;
+
+    &Num {
+      color: g.$accentColor;
+      @include g.rem-fz(28);
+      font-style: normal;
+    }
+
+    &Tax {
+      @include g.rem-fz(16);
+      font-weight: normal;
+    }
+  }
+
+  &__typeWrapper {
+    margin-block-start: 30px;
+  }
+
+  &__type {
+    display: grid;
+    grid-template-areas:
+      "image title"
+      "image form";
+    grid-template-columns:
+      100px 1fr;
+    grid-template-rows:
+      repeat(2, auto);
+    gap: 10px 20px;
+
+    & + & {
+      margin-block-start: 15px;
+    }
+  }
+
+  &__typeImage {
+    grid-area: image;
+  }
+
+  &__typeTitle {
+    grid-area: title;
+    align-self: end;
+  }
+
+  &__form {
+    grid-area: form;
+    align-self: start;
+  }
+
+  &__cartBtn {
+    width: 100%;
+    max-width: 184px;
+  }
+
+
+  @include g.mq('sm-min') {
+
+    &__type {
+      grid-template-areas:
+        "image title form";
+      grid-template-columns:
+        100px 1fr 184px;
+      grid-template-rows:
+        auto;
+    }
+
+    &__typeTitle {
+      align-self: center;
+    }
+
+    &__form {
+      align-self: center;
+    }
+  }
+
+
+  @include g.mq(md-min) {
+
+    // 下の配置
+    &.--bottom {
+      margin-block-start: 100px;
+      padding: 30px;
+
+      & + & {
+        margin-block-start: 50px;
+      }
+
+      .cartBox__typeWrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .cartBox__type {
+        width: calc(480 / 1024 * 100%);
+      }
+
+      .cartBox__type + .cartBox__type {
+        margin-block-start: 0;
+      }
+    }
+
+    // タイプが１つ
+    &.--single {
+      column-gap: 30px;
+
+      .cartBox__figure {
+        width: 200px;
+      }
+    }
+
+
+    &__heading {
+      padding-block-end: 20px;
+      @include g.rem-fz(30);
+    }
+
+    &__type {
+      grid-template-areas:
+        "image title"
+        "image form";
+      grid-template-columns:
+        100px 1fr;
+      grid-template-rows:
+        repeat(2, auto);
+    }
+
+    &__typeTitle {
+      align-self: end;
+    }
+
+    &__form {
+      align-self: start;
+    }
+  }
+
+
+  @include g.mq('lg-min') {
+
+    &__type {
+      grid-template-areas:
+        "image title form";
+      grid-template-columns:
+        100px 1fr 184px;
+      grid-template-rows:
+        auto;
+    }
+
+    &__typeTitle {
+      align-self: center;
+    }
+
+    &__form {
+      align-self: center;
+    }
+  }
+
+}

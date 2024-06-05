@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('./components/common/_head.ejs', { pageTitle: 'トップページ', description: "ハンドメイド猫グッズのお店 l'atelier Queue のホームページです。1点ものの手作り猫グッズ、猫モチーフのアクセサリー・雑貨などを販売しています。" }) %>
+
+
+<body class="top">
+
+<header class="topHeader">
+  <div class="topHeader__head l-container">
+    <h1 class="topHeader__heading">
+      <a href="/" class="topHeader__link">
+        <img class="topHeader__logo" src="../images/common/logo_top_header.svg" alt="ハンドメイド猫グッズのお店　-nekonokomono-　l'atelier Queue（アトリエ・クー）" width="424" height="240">
+      </a>
+    </h1>
+
+    <p class="topHeader__text">
+      “Queue(クー)”は、フランス語で「しっぽ」の意味です。<br>
+      猫にも人にも心地好いをモットーに、猫おもちゃ、雑貨を作っています。
+    </p>
+  </div><!-- /.topHeader__head.l-container -->
+
+  <div class="topHeader__image"></div>
+
+  <%- include('components/common/_gNav.ejs', { src: '../' }) %>
+</header>
+
+
+<main>
+  <div class="l-container">
+
+    <section class="topSection1">
+      <header class="topSection1__heading lv2Heading --icon --btn">
+        <h2 class="lv2Heading__title">お知らせ</h2>
+
+        <a class="lv2Heading__btn sm-btn" href="./blog/">一覧へ</a>
+      </header>
+
+      <dl class="topSection1__list">
+        <dt class="topSection1__listDate">
+          <time datetime="2021-11-01">2021-11-01</time>
+        </dt>
+
+        <dd class="topSection1__listDesc">
+          <span class="topSection1__listTag tag --new">新商品情報</span>
+
+          <a class="topSection1__listLink" href="#">【焼印付】爪とぎ型キーホルダー登場！</a>
+        </dd>
+
+        <dt class="topSection1__listDate">
+          <time datetime="2021-10-28">2021-10-28</time>
+        </dt>
+
+        <dd class="topSection1__listDesc">
+          <span class="topSection1__listTag tag">入荷情報</span>
+
+          <a class="topSection1__listLink" href="#">里親募集型猫カフェ猫式さんの委託販売ブースにアクセサリー・猫首輪・けりぐるみを納品しました。</a>
+        </dd>
+
+        <dt class="topSection1__listDate">
+          <time datetime="2021-10-12">2021-10-12</time>
+        </dt>
+
+        <dd class="topSection1__listDesc">
+          <span class="topSection1__listTag tag">イベント出店</span>
+
+          <a class="topSection1__listLink" href="#">ニャンフェス14 に参加決定。鋭意新作製作中です！</a>
+        </dd>
+
+      </dl>
+    </section>
+
+
+    <section class="topSection2">
+      <header class="topSection2__heading lv2Heading --icon">
+        <h2 class="lv2Heading__title">おすすめ商品</h2>
+      </header>
+
+      <div class="topSection2__list productList --card">
+        <section class="productList__item productCard">
+          <h3 class="productCard__heading">【焼印付】爪とぎ型キーホルダー</h3>
+
+          <figure class="productCard__figure">
+            <img class="productCard__image" src="../images/products/dmy_pd001.jpg" alt="" width="750" height="750">
+          </figure>
+
+          <p class="productCard__text">可愛らしいミニチュアサイズの「猫の爪とぎ」型キーホルダー。木製ケースの裏面には猫シルエットの焼印付きでオシャレ！</p>
+
+          <div class="productCard__price">
+            000円<span class="productCard__priceNote">(税抜)</span>
+          </div>
+
+          <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+
+          <div class="productCard__ribbon">新商品</div>
+        </section>
+
+        <section class="productList__item productCard">
+          <h3 class="productCard__heading">肉球ブローチ（7個セット）</h3>
+
+          <figure class="productCard__figure">
+            <img class="productCard__image" src="../images/products/dmy_pd002.jpg" alt="" width="750" height="750">
+          </figure>
+
+          <p class="productCard__text">定番の肉球型のレジンブローチ（7個セット）です。</p>
+
+          <div class="productCard__price">
+            000円<span class="productCard__priceNote">(税抜)</span>
+          </div>
+
+          <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+        </section>
+
+        <section class="productList__item productCard">
+          <h3 class="productCard__heading">肉球ブローチ（7個セット）</h3>
+
+          <figure class="productCard__figure">
+            <img class="productCard__image" src="../images/products/dmy_pd003.jpg" alt="" width="750" height="750">
+          </figure>
+
+          <p class="productCard__text">アースカラーのレース＋アンティーク調の金具でシックな印象の猫首輪です。</p>
+
+          <div class="productCard__price">
+            000円<span class="productCard__priceNote">(税抜)</span>
+          </div>
+
+          <a class="productCard__btn moreBtn" href="#">詳細を見る</a>
+        </section>
+      </div><!-- /.topSection2__list.productCardList -->
+    </section>
+
+
+    <section class="topSection3">
+      <header class="topSection3__heading lv2Heading --icon">
+        <h2 class="lv2Heading__title">商品カテゴリー</h2>
+      </header>
+
+      <ul class="topSection3__list productList">
+        <li class="productList__item productMedia">
+          <a class="productMedia__link" href="#">
+            <figure class="productMedia__figure">
+              <img class="productMedia__image" src="../images/products/thumb_cate01.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="productMedia__text">レジンブローチ</div>
+          </a>
+        </li>
+
+        <li class="productList__item productMedia">
+          <a class="productMedia__link" href="#">
+            <figure class="productMedia__figure">
+              <img class="productMedia__image" src="../images/products/thumb_cate02.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="productMedia__text">猫用首輪</div>
+          </a>
+        </li>
+
+        <li class="productList__item productMedia">
+          <a class="productMedia__link" href="#">
+            <figure class="productMedia__figure">
+              <img class="productMedia__image" src="../images/products/thumb_cate03.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="productMedia__text">けりぐるみ</div>
+          </a>
+        </li>
+
+        <li class="productList__item productMedia">
+          <a class="productMedia__link" href="#">
+            <figure class="productMedia__figure">
+              <img class="productMedia__image" src="../images/products/thumb_cate04.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="productMedia__text">アクセサリー</div>
+          </a>
+        </li>
+
+        <li class="productList__item productMedia">
+          <a class="productMedia__link" href="#">
+            <figure class="productMedia__figure">
+              <img class="productMedia__image" src="../images/products/thumb_cate05.jpg" alt="" width="240" height="240" loading="lazy">
+            </figure>
+
+            <div class="productMedia__text">その他雑貨</div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="topSection4">
+      <header class="topSection4__heading lv2Heading --center">
+        <h2 class="lv2Heading__title">委託販売先</h2>
+      </header>
+
+      <p class="topSection4__lead">
+        当店は現在以下の3店舗のレンタルボックスにて委託販売をさせていただいております。<br>
+        商品を実際に手にとってお確かめいただけますので、お近くの方はお気軽にお立ち寄り下さい。
+      </p>
+
+      <section class="topSection4__alternate rentalboxAlternate">
+        <div class="rentalboxAlternate__body">
+          <h3 class="rentalboxAlternate__heading">台湾スイーツ豆花専門 黒猫豆花 様</h3>
+
+          <dl class="rentalboxAlternate__list">
+            <dt class="rentalboxAlternate__listTitle">住所</dt>
+            <dd class="rentalboxAlternate__listDesc">神奈川県川崎市高津区二子2丁目7-40　フォーレスト多摩川102</dd>
+
+            <dt class="rentalboxAlternate__listTitle">営業時間</dt>
+            <dd class="rentalboxAlternate__listDesc">10:00-21:00（時短営業中は20:00まで）</dd>
+
+            <dt class="rentalboxAlternate__listTitle">定休日</dt>
+            <dd class="rentalboxAlternate__listDesc">水曜日</dd>
+
+            <dt class="rentalboxAlternate__listTitle">Website</dt>
+            <dd class="rentalboxAlternate__listDesc">
+              <a class="rentalboxAlternate__listLink" href="https://kuroneko-douhua.com/" target="_blank">https://kuroneko-douhua.com/</a>
+            </dd>
+          </dl>
+        </div><!-- /.rentalboxAlternate__body -->
+
+        <figure class="rentalboxAlternate__figure">
+          <img class="rentalboxAlternate__image" src="../images/rentalboxes/img_rental_kuroneko_douhua.jpg" alt="" width="440" height="303" loading="lazy">
+        </figure>
+      </section>
+
+      <section class="topSection4__alternate rentalboxAlternate">
+        <div class="rentalboxAlternate__body">
+          <h3 class="rentalboxAlternate__heading">May’s Cafe -ハンドメイド雑貨＆CAFE-  様</h3>
+
+          <dl class="rentalboxAlternate__list">
+            <dt class="rentalboxAlternate__listTitle">住所</dt>
+            <dd class="rentalboxAlternate__listDesc">東京都世田谷区太子堂5-17-20-1F</dd>
+
+            <dt class="rentalboxAlternate__listTitle">営業時間</dt>
+            <dd class="rentalboxAlternate__listDesc">土日祝日11:00〜19:00のみ営業中</dd>
+
+            <dt class="rentalboxAlternate__listTitle">定休日</dt>
+            <dd class="rentalboxAlternate__listDesc">月〜金曜日</dd>
+
+            <dt class="rentalboxAlternate__listTitle">Instagram</dt>
+            <dd class="rentalboxAlternate__listDesc">
+              <a class="rentalboxAlternate__listLink" href="https://www.instagram.com/mays._.cafe/" target="_blank">https://www.instagram.com/mays._.cafe/</a>
+            </dd>
+          </dl>
+        </div><!-- /.rentalboxAlternate__body -->
+
+        <figure class="rentalboxAlternate__figure">
+          <img class="rentalboxAlternate__image" src="../images/rentalboxes/img_rental_mayscafe.jpg" alt="" width="440" height="303" loading="lazy">
+        </figure>
+      </section>
+
+      <section class="topSection4__alternate rentalboxAlternate">
+        <div class="rentalboxAlternate__body">
+          <h3 class="rentalboxAlternate__heading">里親募集型猫カフェ 猫式 様</h3>
+
+          <dl class="rentalboxAlternate__list">
+            <dt class="rentalboxAlternate__listTitle">住所</dt>
+            <dd class="rentalboxAlternate__listDesc">神奈川県川崎市高津区溝口1－20－10　東方ビル3F</dd>
+
+            <dt class="rentalboxAlternate__listTitle">営業時間</dt>
+            <dd class="rentalboxAlternate__listDesc">12：00～20：00（最終受付19:30）</dd>
+
+            <dt class="rentalboxAlternate__listTitle">定休日</dt>
+            <dd class="rentalboxAlternate__listDesc">月曜日</dd>
+
+            <dt class="rentalboxAlternate__listTitle">Website</dt>
+            <dd class="rentalboxAlternate__listDesc">
+              <a class="rentalboxAlternate__listLink" href="https://www.neko-shiki.net/" target="_blank">https://www.neko-shiki.net/</a>
+            </dd>
+          </dl>
+        </div><!-- /.rentalboxAlternate__body -->
+
+        <figure class="rentalboxAlternate__figure">
+          <img class="rentalboxAlternate__image" src="../images/rentalboxes/img_rental_nekoshiki.jpg" alt="" width="440" height="303" loading="lazy">
+        </figure>
+      </section>
+    </section>
+
+
+    <section class="topSection5">
+      <header class="topSection5__heading lv2Heading --center">
+        <h2 class="lv2Heading__title">プロフィール</h2>
+      </header>
+
+      <img class="topSection5__image" src="/src/images/common/img_profile.jpg" alt="@latelierqueue のアカウント写真" width="280" height="280" loading="lazy">
+
+      <div class="topSection5__account">@latelierqueue</div>
+
+      <p class="topSection5__text">
+        猫雑貨・猫おもちゃ、その他ハンドメイド<br>
+        時々農家になります。
+      </p>
+
+      <ul class="topSection5__sns">
+        <li class="topSection5__snsItem">
+          <a class="topSection5__snsLink" href="#" target="_blank">
+            <img class="topSection5__snsIcon" src="../images/common/sns_twitter.png" alt="Twitter" width="160" height="160" loading="lazy">
+          </a>
+        </li>
+
+        <li class="topSection5__snsItem">
+          <a class="topSection5__snsLink" href="#" target="_blank">
+            <img class="topSection5__snsIcon" src="../images/common/sns_insta.png" alt="Instagram" width="160" height="160" loading="lazy">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </div><!-- /.l-container -->
+</main>
+
+
+<%- include('./components/common/_footer.ejs', { src: '../'}) %>
+
+
+</body>
+</html>
