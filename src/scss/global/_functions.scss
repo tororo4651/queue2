@@ -24,7 +24,7 @@
 
 // 合計
 @function sum($num1: 2, $num2: 6) {
-  @return $num1 + $num2 + px;
+  @return $num1 + $num2 * 1px;
+  // @return $num1 + $num2 + px;
   // @return calc(($num1 + $num2) * 1px);
-  // @return $num1 + $num2 * 1px;
 }
