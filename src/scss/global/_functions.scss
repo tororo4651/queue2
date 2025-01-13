@@ -1,6 +1,7 @@
 // 関数
 
 
+
 // 変数
 @use "./variables" as v;
 
@@ -9,14 +10,21 @@
 
 // ビルトインモジュール
 @use "sass:math";
+@use "sass:map";
+@use "sass:color";
+@use "sass:string";
 
 
 
 
-// rem
-@function rem($size, $root: 16) {
+// rem（フォントサイズ）
+@function rem-fz($size, $root: 16) {
   @return math.div($size, $root) * 1rem;
+  // @return math.div($size, $root) + rem;
+    // "rem" は、不可。
   // @return calc($size / $root * 1rem);
+  // @return calc($size / $root) + rem;
+    // "rem" は、不可。
 }
 
 

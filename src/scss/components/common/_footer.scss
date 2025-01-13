@@ -66,8 +66,8 @@
         line-height: 1;
 
         &:not(:first-child) {
-          margin-inline-start: 7px;
           border-left: solid 1px;
+          margin-inline-start: 7px;
           padding-inline-start: 7px;
         }
       }

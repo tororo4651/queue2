@@ -1,15 +1,18 @@
 // ミックスイン
 
 
+
 // 変数
 @use "_variables.scss" as v;
+
+
 
 
 // ビルトインモジュール
 @use "sass:map";
 @use "sass:math";
-@use "sass:string";
 @use "sass:color";
+@use "sass:string";
 
 
 
