@@ -72,6 +72,7 @@
 // move (previous, next)
 .moveBtn {
   appearance: none;
+  max-width: 400px;
   padding: 20px;
   border: solid 1px;
   border-radius: 6px;
@@ -80,10 +81,10 @@
   line-height: 1;
   text-decoration-line: none;
   cursor: pointer;
+  transition: all .3s;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .3s;
 
   &.--prev {
     background-color: g.$whiteColor;
@@ -101,9 +102,9 @@
 
     &:hover,
     &:focus {
+      border-color: g.$x-baseColor;
       background-color: g.$baseColor;
       color: g.$mainColor;
-      border-color: g.$x-baseColor;
     }
   }
 
