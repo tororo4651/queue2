@@ -16,6 +16,7 @@
 
 
 // グローバルナビゲーションの開閉
+
 const gNavBtn = document.querySelector('.gNavBtn');
 const gNavBtnText = document.querySelector('.gNavBtn__text');
 const gNavBar = document.querySelector('.gNavBtn__bar');
@@ -24,6 +25,7 @@ const gNav = document.querySelector('.gNav');
 
 
 // メインメニューを開く
+
 const openGnav = () => {
   gNavBtn.ariaLabel = 'メインメニューを閉じる';
   gNavBtn.ariaExpanded = 'true';
@@ -34,6 +36,7 @@ const openGnav = () => {
 
 
 // メインメニューを閉じる
+
 const closeGnav = () => {
   gNavBtn.ariaLabel = 'メインメニューを開く';
   gNavBtn.ariaExpanded = 'false';
@@ -181,6 +184,7 @@ min768.addEventListener('change', function(e) {
 
 
 // サムネールの拡大表示
+
 const cartThumbnailImages = document.querySelectorAll('.cartSection__thumbnailImage');
 const cartLargeImage = document.querySelector('.cartSection__largeImage');
 
@@ -200,26 +204,26 @@ cartThumbnailImages.forEach((cartThumbnailImage, index, array) => {
 
 // アコーディオン  FAQ
 
-// 🟡 他の Answer を閉じない。
+// 他の Answer を閉じない。
 
-// const questBtns = document.querySelectorAll('.faqAccordion__questionBtn');
+const questBtns = document.querySelectorAll('.faqAccordion__questionBtn');
 
-// questBtns.forEach((questBtn, index, array) => {
-  //   questBtn.addEventListener('click', function(e) {
-    //     this.classList.toggle('is-open');
+questBtns.forEach((questBtn, index, array) => {
+  questBtn.addEventListener('click', function(e) {
+    this.classList.toggle('is-open');
 
-    //     if (this.classList.contains('is-open')) {
-//       this.parentElement.nextElementSibling.style.maxHeight = this.parentElement.nextElementSibling.scrollHeight + 'px';
-//     } else {
-//       this.parentElement.nextElementSibling.style.maxHeight = 0;
-//     }
-//   }, false);
-// });
-
-
+    if (this.classList.contains('is-open')) {
+      this.parentElement.nextElementSibling.style.maxHeight = this.parentElement.nextElementSibling.scrollHeight + 'px';
+    } else {
+      this.parentElement.nextElementSibling.style.maxHeight = 0;
+    }
+  }, false);
+});
 
 
-// 🟡 他の Answer を閉じる。
+
+
+// 他の Answer を閉じる。
 
 const questBtns = document.querySelectorAll('.faqAccordion__questionBtn');
 
