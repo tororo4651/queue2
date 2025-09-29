@@ -204,7 +204,7 @@ cartThumbnailImages.forEach((cartThumbnailImage, index, array) => {
 
 // アコーディオン  FAQ
 
-// 他の Answer を閉じない。
+// 他の Answer を閉じない
 
 const questBtns = document.querySelectorAll('.faqAccordion__questionBtn');
 
@@ -223,7 +223,7 @@ questBtns.forEach((questBtn, index, array) => {
 
 
 
-// 他の Answer を閉じる。
+// 他の Answer を閉じる
 
 const questBtns = document.querySelectorAll('.faqAccordion__questionBtn');
 
@@ -233,6 +233,7 @@ questBtns.forEach((questBtn, index, array) => {
 
     if (this.classList.contains('is-open')) {
       this.classList.remove('is-open');
+
       answerEl.style.maxHeight = 0;
     } else {
       const questBtns = document.querySelectorAll('.faqAccordion__questionBtn');
@@ -240,6 +241,7 @@ questBtns.forEach((questBtn, index, array) => {
       questBtns.forEach((questBtn) => {
         if (questBtn.classList.contains('is-open')) {
           questBtn.classList.remove('is-open');
+
           questBtn.parentElement.nextElementSibling.style.maxHeight = 0;
         }
       });
@@ -247,13 +249,15 @@ questBtns.forEach((questBtn, index, array) => {
       // or
 
       // const isOpenEls = document.querySelectorAll('.is-open');
-      // console.log(isOpenEls);
+
       // isOpenEls.forEach((isOpenEl) => {
       //   isOpenEl.classList.remove('is-open');
+      //
       //   isOpenEl.parentElement.nextElementSibling.style.maxHeight = 0;
       // });
 
       this.classList.add('is-open');
+
       answerEl.style.maxHeight = answerEl.scrollHeight + 'px';
     }
   }, false);
