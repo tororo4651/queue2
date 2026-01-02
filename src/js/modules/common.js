@@ -206,19 +206,19 @@ cartThumbnailImages.forEach((cartThumbnailImage, index, array) => {
 
 // 他の Answer を閉じない
 
-const questBtns = document.querySelectorAll('.faqAccordion__questionBtn');
+// const questBtns = document.querySelectorAll('.faqAccordion__questionBtn');
 
-questBtns.forEach((questBtn, index, array) => {
-  questBtn.addEventListener('click', function(e) {
-    this.classList.toggle('is-open');
+// questBtns.forEach((questBtn, index, array) => {
+//   questBtn.addEventListener('click', function(e) {
+//     this.classList.toggle('is-open');
 
-    if (this.classList.contains('is-open')) {
-      this.parentElement.nextElementSibling.style.maxHeight = this.parentElement.nextElementSibling.scrollHeight + 'px';
-    } else {
-      this.parentElement.nextElementSibling.style.maxHeight = 0;
-    }
-  }, false);
-});
+//     if (this.classList.contains('is-open')) {
+//       this.parentElement.nextElementSibling.style.maxHeight = this.parentElement.nextElementSibling.scrollHeight + 'px';
+//     } else {
+//       this.parentElement.nextElementSibling.style.maxHeight = 0;
+//     }
+//   }, false);
+// });
 
 
 
